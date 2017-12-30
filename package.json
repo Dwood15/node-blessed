@@ -13,7 +13,7 @@
   "keywords": ["curses", "tui", "tput", "terminfo", "termcap"],
   "tags": ["curses", "tui", "tput", "terminfo", "termcap"],
   "engines": {
-    "node": ">= 1.0.0"
+    "node": ">= 0.8.0"
   },
   "browserify": {
     "transform": ["./browser/transform.js"]
