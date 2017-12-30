@@ -4,7 +4,7 @@ A curses-like library with a high level terminal interface API for node.js.
 
 ![node-blessed](https://raw.githubusercontent.com/chjj/node-blessed/master/img/v0.1.0-3.gif)
 
-node-blessed is over 16,000 lines of code and terminal goodness. It's completely
+Blessed is over 16,000 lines of code and terminal goodness. It's completely
 implemented in javascript, and its goal consists of two things:
 
 1. Reimplement ncurses entirely by parsing and compiling terminfo and termcap,
@@ -13,20 +13,20 @@ with _any_ terminal.
 
 2. Implement a widget API which is heavily optimized for terminals.
 
-The node-blessed renderer makes use of CSR (change-scroll-region), and BCE
+The Blessed renderer makes use of CSR (change-scroll-region), and BCE
 (back-color-erase). It draws the screen using the painter's algorithm and is
 sped up with smart cursor movements and a screen damage buffer. This means
 rendering of your application will be extremely efficient: node-blessed only draws
 the changes (damage) to the screen.
 
-node-blessed is arguably as accurate as ncurses, but even more optimized in some
+Blessed is arguably as accurate as ncurses, but even more optimized in some
 ways. The widget library gives you an API which is reminiscent of the DOM.
 Anyone is able to make an awesome terminal application with node-blessed. There are
 terminal widget libraries for other platforms (primarily [python][urwid] and
 [perl][curses-ui]), but node-blessed is possibly the most DOM-like (dare I say the
 most user-friendly?).
 
-node-blessed has been used to implement other popular libraries and programs.
+Blessed has been used to implement other popular libraries and programs.
 Examples include: the [slap text editor][slap] and [node-blessed-contrib][contrib].
 The node-blessed API itself has gone on to inspire [termui][termui] for Go.
 
@@ -42,7 +42,7 @@ This will render a box with line borders containing the text `'Hello world!'`,
 perfectly centered horizontally and vertically.
 
 __NOTE__: It is recommend you use either `smartCSR` or `fastCSR` as a
-`node-blessed.screen` option. This will enable CSR when scrolling text in elements
+`blessed.screen` option. This will enable CSR when scrolling text in elements
 or when manipulating lines.
 
 ``` js
