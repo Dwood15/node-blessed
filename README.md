@@ -1,10 +1,10 @@
-# blessed
+# node-blessed
 
 A curses-like library with a high level terminal interface API for node.js.
 
-![blessed](https://raw.githubusercontent.com/chjj/blessed/master/img/v0.1.0-3.gif)
+![node-blessed](https://raw.githubusercontent.com/chjj/node-blessed/master/img/v0.1.0-3.gif)
 
-Blessed is over 16,000 lines of code and terminal goodness. It's completely
+node-blessed is over 16,000 lines of code and terminal goodness. It's completely
 implemented in javascript, and its goal consists of two things:
 
 1. Reimplement ncurses entirely by parsing and compiling terminfo and termcap,
@@ -13,27 +13,27 @@ with _any_ terminal.
 
 2. Implement a widget API which is heavily optimized for terminals.
 
-The blessed renderer makes use of CSR (change-scroll-region), and BCE
+The node-blessed renderer makes use of CSR (change-scroll-region), and BCE
 (back-color-erase). It draws the screen using the painter's algorithm and is
 sped up with smart cursor movements and a screen damage buffer. This means
-rendering of your application will be extremely efficient: blessed only draws
+rendering of your application will be extremely efficient: node-blessed only draws
 the changes (damage) to the screen.
 
-Blessed is arguably as accurate as ncurses, but even more optimized in some
+node-blessed is arguably as accurate as ncurses, but even more optimized in some
 ways. The widget library gives you an API which is reminiscent of the DOM.
-Anyone is able to make an awesome terminal application with blessed. There are
+Anyone is able to make an awesome terminal application with node-blessed. There are
 terminal widget libraries for other platforms (primarily [python][urwid] and
-[perl][curses-ui]), but blessed is possibly the most DOM-like (dare I say the
+[perl][curses-ui]), but node-blessed is possibly the most DOM-like (dare I say the
 most user-friendly?).
 
-Blessed has been used to implement other popular libraries and programs.
-Examples include: the [slap text editor][slap] and [blessed-contrib][contrib].
-The blessed API itself has gone on to inspire [termui][termui] for Go.
+node-blessed has been used to implement other popular libraries and programs.
+Examples include: the [slap text editor][slap] and [node-blessed-contrib][contrib].
+The node-blessed API itself has gone on to inspire [termui][termui] for Go.
 
 ## Install
 
 ``` bash
-$ npm install blessed
+$ npm install node-blessed
 ```
 
 ## Example
@@ -42,11 +42,11 @@ This will render a box with line borders containing the text `'Hello world!'`,
 perfectly centered horizontally and vertically.
 
 __NOTE__: It is recommend you use either `smartCSR` or `fastCSR` as a
-`blessed.screen` option. This will enable CSR when scrolling text in elements
+`node-blessed.screen` option. This will enable CSR when scrolling text in elements
 or when manipulating lines.
 
 ``` js
-var blessed = require('blessed');
+var blessed = require('node-blessed');
 
 // Create a screen object.
 var screen = blessed.screen({
@@ -1941,7 +1941,7 @@ shadow: true
 
 ##### Effects
 
-Blessed supports hover and focus styles. (Hover is only useful is mouse input
+Blessed supports hover and focus styles. (Hover is only useful if mouse input
 is enabled).
 
 ``` js
@@ -2140,7 +2140,7 @@ A simple telnet server might look like this (see examples/blessed-telnet.js for
 a full example):
 
 ``` js
-var blessed = require('blessed');
+var blessed = require('node-blessed');
 var telnet = require('telnet2');
 
 telnet({ tty: true }, function(client) {
@@ -2255,7 +2255,7 @@ This will actually parse the xterm terminfo and compile every
 string capability to a javascript function:
 
 ``` js
-var blessed = require('blessed');
+var blessed = require('node-blessed');
 
 var tput = blessed.tput({
   terminal: 'xterm-256color',
@@ -2276,7 +2276,7 @@ $ echo "$(tput.js setaf 2)Hello World$(tput.js sgr0)"
 The main functionality is exposed in the main `blessed` module:
 
 ``` js
-var blessed = require('blessed')
+var blessed = require('node-blessed')
   , program = blessed.program();
 
 program.key('q', function(ch, key) {
@@ -2375,7 +2375,7 @@ Examples can be found in `examples/`.
 
 If you contribute code to this project, you are implicitly allowing your code
 to be distributed under the MIT license. You are also implicitly verifying that
-all code is your original work. `</legalese>`
+all code is your original work.
 
 
 ## License

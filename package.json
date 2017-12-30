@@ -1,24 +1,21 @@
 {
   "name": "node-blessed",
   "description": "A high-level terminal interface library for node.js - forked from chjj/blessed",
-  "author": "Christopher Jeffrey & Dason Woodhouse",
+  "author": "Christopher Jeffrey",
   "version": "0.3.0",
   "license": "MIT",
   "main": "./lib/blessed.js",
   "bin": "./bin/tput.js",
   "preferGlobal": false,
-  "repository": "git://github.com/Dwood15/node-blessed.git",
+  "repository": "github:Dwood15/node-blessed",
   "homepage": "https://github.com/Dwood15/node-blessed",
   "bugs": { "url": "http://github.com/Dwood15/node-blessed/issues" },
   "keywords": ["curses", "tui", "tput", "terminfo", "termcap"],
   "tags": ["curses", "tui", "tput", "terminfo", "termcap"],
   "engines": {
-    "node": ">= 0.8.0"
+    "node": ">= 1.0.0"
   },
   "browserify": {
     "transform": ["./browser/transform.js"]
-  },
-  "pkg": {
-    "scripts": "lib/widgets/*.js"
   }
 }
